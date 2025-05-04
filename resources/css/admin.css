@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+.login-left {
+    flex: 1;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-left h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.login-left input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.forgot {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot a {
+    color: #ccc;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #00D447;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.divider {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-google, .btn-facebook {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.btn-google {
+    background-color: white;
+    color: #555;
+}
+
+.btn-facebook {
+    background-color: #4267B2;
+    color: white;
+}
+
+.login-right {
+    flex: 1;
+    background: linear-gradient(to bottom right, #007f00, #00cc00);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-right h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.login-right h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.phone {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f6ff00;
+}
