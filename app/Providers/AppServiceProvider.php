@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Services\CometChatService;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(CometChatService::class, function ($app) {
+            return new CometChatService();
+        });
     }
 
     /**
@@ -23,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if (isset($_SERVER['HTTPS']) || request()->header('x-forwarded-proto') === 'https') {
+        URL::forceScheme('https');
+    }
     }
 }

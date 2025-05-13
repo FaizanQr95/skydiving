@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminLoginController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,9 @@ use App\Http\Controllers\AdminLoginController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+   return "Welcome to Sky Diving";
+});
 Route::middleware('guest:admin')->group(function () {
     Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
     Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
@@ -33,6 +34,8 @@ Route::middleware('auth:admin')->group(function () {
 
 //    Sqaure Customers
     Route::get('/admin/customer', [AdminController::class, 'fetchCustomer'])->name('admin.fetch_customer.');
+
+    Route::get('/admin/customer_support', [AdminController::class, 'customerSupport'])->name('admin.customer_support.');
 
 
     Route::get('/admin/fetch_customer', [AdminController::class,'customer'])->name('admin.customer');
@@ -52,5 +55,22 @@ Route::middleware('auth:admin')->group(function () {
     });
 });
 
+Route::get('/run-migrations', function () {
+    // Optional: Add a basic security key check
+    if (request('key') !== 'SecretKey123') {
+        abort(403, 'Unauthorized');
+    }
 
+    Artisan::call('migrate', [
+        '--force' => true
+    ]);
+
+    return 'Migrations ran successfully.';
+});
+
+
+Route::get('/session-test', function () {
+    session(['key' => 'value']);
+    return session('key', 'nothing');
+});
 

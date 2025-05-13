@@ -213,7 +213,7 @@
                 if (result.isConfirmed) {
                     // Proceed with the AJAX request
                     $.ajax({
-                        url: 'info/public/admin/update-referral-status',
+                        url: '/admin/update-referral-status',
                         type: 'POST',
                         data: {
                             _token: '{{ csrf_token() }}',

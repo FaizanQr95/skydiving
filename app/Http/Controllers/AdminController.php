@@ -88,6 +88,7 @@ class AdminController extends Controller
             });
         }
 
+
         if ($request->filled('status')) {
             $query->where('status', $request->input('status'));
         }
@@ -301,5 +302,9 @@ class AdminController extends Controller
         return back()->with('success', 'Reward updated successfully.');
     }
 
+    public function customerSupport()
+    {
+        return view('admin.customer_support');
+    }
 }
 

@@ -98,6 +98,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Support Email Recipient
+    |--------------------------------------------------------------------------
+    |
+    | This is the email address where support requests will be sent.
+    |
+    */
+    'support_recipient' => env('SUPPORT_EMAIL_RECIPIENT', 'default_support@example.com'),
+    
+    /*
+    |--------------------------------------------------------------------------
     | Markdown Mail Settings
     |--------------------------------------------------------------------------
     |

@@ -36,4 +36,10 @@ return [
     ],
 
 
+    'cometchat' => [
+        'app_id'   => env('COMETCHAT_APP_ID'),
+        'api_key'  => env('COMETCHAT_API_KEY'), // Server-to-Server REST API Key
+        'region'   => env('COMETCHAT_REGION'),
+        'auth_key' => env('COMETCHAT_AUTH_KEY'), // For generating client-side auth tokens
+    ],
 ];

@@ -1,60 +1,3 @@
-{{--<div style="width: 250px; background-color: #232323; padding: 20px;">--}}
-{{--    <h2 style="color: #e0e0e0;">Skydiving</h2>--}}
-
-{{--    <ul style="list-style-type: none; padding: 0;">--}}
-{{--        <div style="background-color: #2c2c2c; padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a;">--}}
-{{--            <a href="{{url('admin/dashboard')}}" style="text-decoration: none; color: #b0ff1a;">Dashboard</a>--}}
-{{--        </div>--}}
-{{--    </ul>--}}
-
-{{--    <br>--}}
-
-{{--    <ul style="list-style-type: none; padding: 0;">--}}
-{{--        <div style="background-color: #2c2c2c; padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a;">--}}
-{{--            <a href="#" style="text-decoration: none; color: #b0ff1a;">Referal Management</a>--}}
-{{--        </div>--}}
-{{--    </ul>--}}
-
-{{--    <ul style="list-style-type: none; padding: 0;">--}}
-{{--        <div style="background-color: #2c2c2c; padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a;">--}}
-{{--            <a href="{{url('admin/user-management')}}" style="text-decoration: none; color: #b0ff1a;">User Management</a>--}}
-{{--        </div>--}}
-{{--    </ul>--}}
-
-{{--    <ul style="list-style-type: none; padding: 0;">--}}
-{{--            <div style="background-color: #2c2c2c; padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a;">--}}
-{{--            <a href="#" style="text-decoration: none; color: #b0ff1a;">Rewards Management</a>--}}
-{{--            </div>--}}
-{{--        </ul>--}}
-
-{{--    <br>--}}
-
-{{--    <ul style="list-style-type: none; padding: 0;">--}}
-{{--                <div style="background-color: #2c2c2c; padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a;">--}}
-{{--            <a href="#" style="text-decoration: none; color: #b0ff1a;">Settings</a>--}}
-{{--        </div>--}}
-{{--    </ul>--}}
-
-{{--    <ul style="list-style-type: none; padding: 0;">--}}
-{{--        <div style="background-color: #2c2c2c; padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a;">--}}
-{{--            <a href="#" style="text-decoration: none; color: #b0ff1a;">Notifications</a>--}}
-{{--        </div>--}}
-{{--    </ul>--}}
-
-{{--    <ul style="list-style-type: none; padding: 0;">--}}
-{{--        <div style="background-color: #2c2c2c; margin-top: 70px; padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a;">--}}
-{{--            <a href="{{ url('profile') }}" style="text-decoration: none; color: #b0ff1a; font-weight: bold;">Profile--}}
-{{--            </a>--}}
-{{--        </div>--}}
-{{--    </ul>--}}
-
-{{--    <div style="margin-top: 70px;">--}}
-{{--        <form action="{{ route('admin.logout') }}" method="POST">--}}
-{{--            @csrf--}}
-{{--            <button type="submit" style="background-color: lime; color: white; padding: 10px; width: 100px; display: inline-block; border-radius: 4px;">Logout</button>--}}
-{{--        </form>--}}
-{{--    </div>--}}
-{{--</div>--}}
 
 <style>
     @keyframes parachute-float {
@@ -155,18 +98,18 @@
 {{--            </li>--}}
 
             <li style="margin-bottom: 10px;">
-                <a href="#"
-                   style="display: block; background-color: {{ Request::is('admin/notifications') ? '#00cc00' : '#2c2c2c' }};
-                   color: {{ Request::is('admin/notifications') ? '#000' : '#00cc00' }};
+                <a href="{{url('/admin/customer_support')}}"
+                   style="display: block; background-color: {{ Request::is('admin/customer_support') ? '#00cc00' : '#2c2c2c' }};
+                   color: {{ Request::is('admin/customer_support') ? '#000' : '#00cc00' }};
                    padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a; text-decoration: none;">
-                    🔔 Notifications
+                    💬 Customer Queries
                 </a>
             </li>
 
             <li style="margin-bottom: 10px;">
                 <a href="#"
-                   style="display: block; background-color: {{ Request::is('admin/support-chat') ? '#00cc00' : '#2c2c2c' }};
-                   color: {{ Request::is('admin/support-chat') ? '#000' : '#00cc00' }};
+                   style="display: block; background-color: {{ Request::is('admin/notifcations') ? '#00cc00' : '#2c2c2c' }};
+                   color: {{ Request::is('admin/notifcations') ? '#000' : '#00cc00' }};
                    padding: 10px 15px; border-radius: 8px; border: 1px solid #3a3a3a; text-decoration: none;">
                     🔔 Notifications
                 </a>
